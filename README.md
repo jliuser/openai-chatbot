@@ -1,2 +1,6 @@
-# openai-chatbot
-Testing OpenAI's chatbot functionality
+# azure-openai-chatbot
+Azure OpenAI Chatbot that can intelligbly devise and execute data analysis tasks in order to answer user queries about a given dataset.
+
+As of August 2024, openai assistants can only ingest local files or files on Azure blob storage. Data within a python environment cannot be passed to it directly. Often, applications will pull in data via an API request from an external server (SQL, etc.). However, for data security purposes, that data cannot safely be stored on a local drive or Azure blob storage. How can we get an openai model to still interact with this data? If the data size is small, then we can simply pass the entire dataset to a prompt. However, in most cases, data scale will exceed the max character limits.
+
+Here, I've developed a chatbot that takes in a user query and generates Python code to analyze a DataFrame in its memory. In this case, we're pulling from a local CSV file, but you can imagine that this code takes place in the middle of a production pipeline, where this data is only accessible in a DataFrame format. The script then executes this code on the DataFrame, and then generates a user-friendly colloquial response to the user's initial query. The user can chat back and forth with the bot until satisfied.
