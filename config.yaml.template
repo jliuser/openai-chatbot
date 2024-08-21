@@ -1,0 +1,5 @@
+azure_openai:
+    AZURE_OPENAI_API_KEY: <Enter your Azure OpenAI API key>
+    AZURE_OPENAI_ENDPOINT: <Replace with your Azure OpenAI endpoint>
+    AZURE_OPENAI_DEPLOYMENT_NAME: <Enter name of your Deployment Model>
+    AZURE_OPENAI_API_VERSION: "2024-02-15-preview" # must use this version. Any other version breaks.
