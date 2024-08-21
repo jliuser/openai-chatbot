@@ -4,7 +4,7 @@ import pandas as pd
 
 from chatgpt import generate_chatbot_response, generate_code_from_user_question
 
-full_dataset = pd.read_csv('DC_Public_Employee_Salary.csv')
+full_dataset = pd.read_csv('resources/DC_Public_Employee_Salary.csv')
 sample_data = full_dataset.head(10)
 metadata = {'description': 'this dataset contains salary data for public employees in DC',
             'columns': ['FIRST_NAME','LAST_NAME','JOBTITLE','DESCRSHORT','GRADE','COMPRATE','HIREDATE_STRING','GVT_TYPE_OF_APPT','OBJECTID'],
